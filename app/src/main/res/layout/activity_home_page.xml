@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SCREEN"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <RelativeLayout
+        android:id="@+id/menu_background"
+        android:layout_width="291dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/menu_background">
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="100dp"
+            android:src="@mipmap/app_logo" />
+
+        <ImageView
+            android:id="@+id/homeMenu"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginBottom="-125dp"
+            android:layout_marginLeft="109dp"
+            android:layout_alignBottom="@+id/app_logo"
+            android:src="@drawable/home_white" />
+
+        <TextView
+            android:id="@+id/homeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/homeMenu"
+            android:layout_marginLeft="129dp"
+            android:layout_marginBottom="-20dp"
+            android:textStyle="bold"
+            android:text="HOME"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/historyMenu"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginBottom="-125dp"
+            android:layout_marginLeft="109dp"
+            android:layout_alignBottom="@+id/homeLabel"
+            android:src="@drawable/history_green" />
+
+        <TextView
+            android:id="@+id/historyLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/historyMenu"
+            android:layout_marginLeft="120dp"
+            android:layout_marginBottom="-20dp"
+            android:textStyle="bold"
+            android:text="HISTORY"
+            android:textColor="@color/hijaupastel" />
+
+        <ImageView
+            android:id="@+id/settingMenu"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginBottom="-125dp"
+            android:layout_marginLeft="109dp"
+            android:layout_alignBottom="@+id/historyLabel"
+            android:src="@drawable/setting_green" />
+
+        <TextView
+            android:id="@+id/settingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/settingMenu"
+            android:layout_marginLeft="120dp"
+            android:layout_marginBottom="-20dp"
+            android:textStyle="bold"
+            android:text="SETTING"
+            android:textColor="@color/hijaupastel" />
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginBottom="-125dp"
+            android:layout_marginLeft="114dp"
+            android:layout_alignBottom="@+id/settingLabel"
+            android:src="@drawable/logout" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/DIVIDER"
+        android:layout_marginStart="65dp"
+        android:id="@+id/divider"
+        android:layout_toEndOf="@id/menu_background"
+        android:layout_width="5dp"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_width="977dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/divider">
+
+        <LinearLayout
+            android:id="@+id/left"
+            android:orientation="vertical"
+            android:layout_marginTop="38dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/first"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="140dp" >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/minmaxAmount"
+                    android:backgroundTint="@color/hijaupale"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp" >
+
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:background="@drawable/setting_back"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/maxExpense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="10dp"
+                            android:textAlignment="textStart"
+                            android:visibility="gone"
+                            android:textColor="@color/hijaupastel" />
+
+                        <TextView
+                            android:id="@+id/minExpense"
+                            android:textColor="@color/hijaupastel"
+                            android:textAlignment="textStart"
+                            android:layout_marginBottom="8dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/minmaxEarn"
+                    android:backgroundTint="@color/hijaupale"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp" >
+
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:background="@drawable/setting_back"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/maxIncome"
+                            android:textColor="@color/hijaupastel"
+                            android:textAlignment="textStart"
+                            android:layout_marginBottom="10dp"
+                            android:layout_alignParentBottom="true"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/minIncome"
+                            android:textColor="@color/hijaupastel"
+                            android:textAlignment="textStart"
+                            android:layout_marginBottom="8dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <TextView
+                android:text="TOTAL EXPENSE AND EARNING"
+                android:textSize="27dp"
+                android:textStyle="bold"
+                style="@style/TEXT"
+                android:maxLines="2"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="450dp" >
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/second"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="38dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/left"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/graph"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="30dp"
+                android:text="TOTAL AMOUNT BY CATEGORY"
+                style="@style/TEXT"
+                android:textStyle="bold"
+                android:textSize="24dp" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:paddingLeft="25dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/categView"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/addRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            style="@style/BUTTON"
+            app:cardCornerRadius="40dp">
+
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="176dp"
+            android:layout_height="wrap_content"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/addExp"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/round_add" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@+id/addExp"
+                android:text="Add Record"
+                android:textColor="@color/hijaupastel"
+                android:textSize="32px" />
+
+        </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

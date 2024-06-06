@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TransactionEdit">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back_setting_item"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/baseline_keyboard_backspace_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/back"
+                android:textStyle="bold"
+                style="@style/TEXT"
+                android:text="RECORD EDIT" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="@drawable/round_img_night"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/transInput"
+                android:layout_marginLeft="60dp"
+                android:layout_width="388dp"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/amount"
+                    android:layout_width="328dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/edit_text"
+                    android:textColor="@color/hijaupale"
+                    android:hint="Amount"
+                    android:textColorHint="@color/hint"
+                    android:inputType="numberDecimal"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/categList"
+                    android:hint="Category"
+                    android:textColorHint="@color/hint"
+                    android:background="@drawable/edit_text"
+                    android:textColor="@color/hijaupale"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@+id/amount"
+                    android:layout_width="328dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:padding="15dp" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="328dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/categList"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/edit_text"
+                    android:drawableRight="@drawable/date_picker_icon"
+                    android:drawablePadding="4dp"
+                    android:hint="Date"
+                    android:inputType="text"
+                    android:padding="15dp"
+                    android:textColor="@color/hijaupale"
+                    android:textColorHint="@color/hint"
+                    android:textSize="18dp"/>
+
+                <EditText
+                    android:id="@+id/notes"
+                    android:layout_width="328dp"
+                    android:layout_height="120dp"
+                    android:layout_below="@+id/date"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/edit_text"
+                    android:gravity="start"
+                    android:textColor="@color/hijaupale"
+                    android:hint="Note"
+                    android:textColorHint="@color/hint"
+                    android:padding="15dp"
+                    android:textAlignment="textStart" />
+
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="328dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/notes"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/edit_text"
+                    android:hint="Type"
+                    android:inputType="text"
+                    android:padding="15dp"
+                    android:textColor="@color/hijaupale"
+                    android:textColorHint="@color/hint"
+                    android:textSize="18dp"/>
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    android:textColor="@color/hijaupastel"
+                    android:backgroundTint="@color/hijaupale"
+                    android:text="Record"
+                    android:layout_below="@id/type"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/imageShow"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_width="480dp"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/transInput">
+
+                <com.ortiz.touchview.TouchImageView
+                    android:id="@+id/receipt"
+                    android:layout_width="480dp"
+                    android:layout_height="match_parent"
+                    android:minWidth="470dp"
+                    android:minHeight="498dp"
+                    android:src="@drawable/receiptshow" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

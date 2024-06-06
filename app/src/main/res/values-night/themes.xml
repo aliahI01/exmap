@@ -1,0 +1,40 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Exmap" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/hijaupale</item>
+        <item name="colorPrimaryVariant">@color/hijaupale</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="SCREEN">
+        <item name="android:background">@color/hijaupale</item>
+    </style>
+    <style name="TEXT">
+        <item name="android:textColor">@color/hijaupastel</item>
+    </style>
+    <style name="DESC">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="HINT">
+        <item name="android:textColor">@color/hijaupastel</item>
+    </style>
+    <style name="BUTTON">
+        <item name="android:textColor">@color/hijaupastel</item>
+    </style>
+    <style name="IMAGE">
+        <item name="android:background">@drawable/round_img_night</item>
+    </style>
+    <style name="DIVIDER">
+        <item name="android:background">@color/hijaudark</item>
+    </style>
+
+</resources>

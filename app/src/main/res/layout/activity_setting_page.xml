@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SCREEN"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingPage">
+
+    <RelativeLayout
+        android:id="@+id/menu_background"
+        android:layout_width="291dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/menu_background">
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="100dp"
+            android:src="@mipmap/app_logo" />
+
+        <ImageView
+            android:id="@+id/homeMenu"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginBottom="-125dp"
+            android:layout_marginLeft="109dp"
+            android:layout_alignBottom="@+id/app_logo"
+            android:src="@drawable/home_green" />
+
+        <TextView
+            android:id="@+id/homeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/homeMenu"
+            android:layout_marginLeft="129dp"
+            android:layout_marginBottom="-20dp"
+            android:textStyle="bold"
+            android:text="HOME"
+            android:textColor="@color/hijaupastel" />
+
+        <ImageView
+            android:id="@+id/historyMenu"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginBottom="-125dp"
+            android:layout_marginLeft="109dp"
+            android:layout_alignBottom="@+id/homeLabel"
+            android:src="@drawable/history_green" />
+
+        <TextView
+            android:id="@+id/historyLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/historyMenu"
+            android:layout_marginLeft="120dp"
+            android:layout_marginBottom="-20dp"
+            android:textStyle="bold"
+            android:text="HISTORY"
+            android:textColor="@color/hijaupastel" />
+
+        <ImageView
+            android:id="@+id/settingMenu"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginBottom="-125dp"
+            android:layout_marginLeft="109dp"
+            android:layout_alignBottom="@+id/historyLabel"
+            android:src="@drawable/setting_white" />
+
+        <TextView
+            android:id="@+id/settingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/settingMenu"
+            android:layout_marginLeft="120dp"
+            android:layout_marginBottom="-20dp"
+            android:textStyle="bold"
+            android:text="SETTING"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginBottom="-125dp"
+            android:layout_marginLeft="114dp"
+            android:layout_alignBottom="@+id/settingLabel"
+            android:src="@drawable/logout" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/DIVIDER"
+        android:layout_marginStart="65dp"
+        android:id="@+id/divider"
+        android:layout_toEndOf="@id/menu_background"
+        android:layout_width="5dp"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="977dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:layout_toEndOf="@+id/divider"
+        android:background="@drawable/setting_backg"
+        android:orientation="vertical">
+
+        <!-- Top -->
+
+        <LinearLayout
+            android:id="@+id/topSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/edit_img"
+            android:layout_marginStart="47dp"
+            android:layout_marginEnd="43dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <!-- Top Left -->
+            <LinearLayout
+                android:id="@+id/leftTop"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setting_back"
+                android:orientation="vertical">
+
+                <!-- Profile Detail -->
+                <RelativeLayout
+                    android:id="@+id/profile_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/profile_icon"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/setting_back"
+                        android:backgroundTint="@color/hijaupastel"
+                        android:padding="12dp"
+                        android:src="@drawable/note" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/profile_icon"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="70dp"
+                        android:text="Taking Notes"
+                        android:textColor="@color/hijaupastel"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/add_note"
+                        android:text="Add Note"
+                        android:textStyle="bold"
+                        android:textColor="@color/hijaupastel"
+                        android:paddingBottom="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/view_note"
+                        android:text="View Note"
+                        android:textStyle="bold"
+                        android:textColor="@color/hijaupastel"
+                        android:paddingBottom="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Top Right -->
+            <LinearLayout
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/setting_back"
+                android:orientation="vertical">
+
+                <!-- Scholarship Detail -->
+                <RelativeLayout
+                    android:id="@+id/scholar_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/scholar_icon"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/setting_back"
+                        android:backgroundTint="@color/hijaupastel"
+                        android:padding="12dp"
+                        android:src="@drawable/feedback" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/scholar_icon"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="70dp"
+                        android:text="Feedback User"
+                        android:textColor="@color/hijaupastel"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/add_feed"
+                        android:text="Add Feedback"
+                        android:textStyle="bold"
+                        android:textColor="@color/hijaupastel"
+                        android:paddingBottom="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/view_feed"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textColor="@color/hijaupastel"
+                        android:paddingBottom="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- Bottom -->
+        <LinearLayout
+            android:id="@+id/bottomSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/topSetting"
+            android:layout_marginBottom="80dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <!-- Bottom Left -->
+            <LinearLayout
+                android:id="@+id/leftBottom"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setting_back"
+                android:orientation="vertical">
+
+                <!-- Night Mode -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/night_icon"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/setting_back"
+                        android:backgroundTint="@color/hijaupastel"
+                        android:padding="12dp"
+                        android:src="@drawable/night" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/night_icon"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="70dp"
+                        android:text="Night Mode"
+                        android:textColor="@color/hijaupastel"
+                        android:textStyle="bold" />
+
+                    <Switch
+                        android:id="@+id/night_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:minWidth="50dp"
+                        android:theme="@style/nightMode" />
+
+                </RelativeLayout>
+
+                <!-- Notification Mode -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/noti_icon"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/setting_back"
+                        android:backgroundTint="@color/hijaupastel"
+                        android:padding="12dp"
+                        android:src="@drawable/noti" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/noti_icon"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="70dp"
+                        android:text="Notification"
+                        android:textColor="@color/hijaupastel"
+                        android:textStyle="bold" />
+
+                    <Switch
+                        android:id="@+id/noti_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:minWidth="50dp"
+                        android:theme="@style/notiMode" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!-- Bottom Right -->
+            <LinearLayout
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/setting_back"
+                android:orientation="vertical">
+
+                <!-- About Us -->
+                <RelativeLayout
+                    android:id="@+id/about_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/about_icon"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/setting_back"
+                        android:backgroundTint="@color/hijaupastel"
+                        android:padding="12dp"
+                        android:src="@drawable/about" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/about_icon"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="70dp"
+                        android:text="About"
+                        android:textColor="@color/hijaupastel"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:minWidth="50dp"
+                        android:src="@drawable/arrow_right" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/email"
+                        android:text="Email: aliahizzati2701@gmail.com"
+                        android:textStyle="bold"
+                        android:textColor="@color/hijaupastel"
+                        android:paddingBottom="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/website"
+                        android:text="Website: https://tinyurl.com/yc4u7pex"
+                        android:textStyle="bold"
+                        android:textColor="@color/hijaupastel"
+                        android:paddingBottom="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

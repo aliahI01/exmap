@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SCREEN"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HistoryPage">
+
+    <RelativeLayout
+        android:id="@+id/menu_background"
+        android:layout_width="291dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/menu_background">
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="100dp"
+            android:src="@mipmap/app_logo" />
+
+        <ImageView
+            android:id="@+id/homeMenu"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginBottom="-125dp"
+            android:layout_marginLeft="109dp"
+            android:layout_alignBottom="@+id/app_logo"
+            android:src="@drawable/home_green" />
+
+        <TextView
+            android:id="@+id/homeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/homeMenu"
+            android:layout_marginLeft="129dp"
+            android:layout_marginBottom="-20dp"
+            android:textStyle="bold"
+            android:text="HOME"
+            android:textColor="@color/hijaupastel" />
+
+        <ImageView
+            android:id="@+id/historyMenu"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginBottom="-125dp"
+            android:layout_marginLeft="109dp"
+            android:layout_alignBottom="@+id/homeLabel"
+            android:src="@drawable/history_white" />
+
+        <TextView
+            android:id="@+id/historyLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/historyMenu"
+            android:layout_marginLeft="120dp"
+            android:layout_marginBottom="-20dp"
+            android:textStyle="bold"
+            android:text="HISTORY"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/settingMenu"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginBottom="-125dp"
+            android:layout_marginLeft="109dp"
+            android:layout_alignBottom="@+id/historyLabel"
+            android:src="@drawable/setting_green" />
+
+        <TextView
+            android:id="@+id/settingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/settingMenu"
+            android:layout_marginLeft="120dp"
+            android:layout_marginBottom="-20dp"
+            android:textStyle="bold"
+            android:text="SETTING"
+            android:textColor="@color/hijaupastel" />
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginBottom="-125dp"
+            android:layout_marginLeft="114dp"
+            android:layout_alignBottom="@+id/settingLabel"
+            android:src="@drawable/logout" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/DIVIDER"
+        android:layout_marginStart="65dp"
+        android:id="@+id/divider"
+        android:layout_toEndOf="@id/menu_background"
+        android:layout_width="5dp"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_width="977dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/divider">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="25dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/expenseHist"
+                android:nestedScrollingEnabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/addRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            style="@style/BUTTON"
+            app:cardCornerRadius="40dp">
+
+            <RelativeLayout
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="176dp"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <ImageView
+                    android:id="@+id/addExp"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/round_add" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/addExp"
+                    android:text="Add Record"
+                    android:textColor="@color/hijaupastel"
+                    android:textSize="32px" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

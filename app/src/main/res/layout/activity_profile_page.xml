@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/hijaudark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfilePage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back_setting_item"
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/baseline_keyboard_backspace_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/back"
+                android:textStyle="bold"
+                style="@style/TEXT"
+                android:text="USER PROFILE" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="510dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_img_night"
+            android:paddingLeft="130dp"
+            android:paddingTop="80dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Name"
+                    android:textColor="@color/hijaupale"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="210dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/edit_text"
+                    android:padding="12dp"
+                    android:textColor="@color/hijaupale" />
+
+                <TextView
+                    android:id="@+id/tv_uni"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="University"
+                    android:textColor="@color/hijaupale"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/uni"
+                    android:layout_width="210dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/edit_text"
+                    android:padding="12dp"
+                    android:textColor="@color/hijaupale" />
+
+                <TextView
+                    android:id="@+id/tv_sStudy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Start Study"
+                    android:textColor="@color/hijaupale"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/sStudy"
+                    android:layout_width="210dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/edit_text"
+                    android:drawableRight="@drawable/date_picker_icon"
+                    android:drawablePadding="4dp"
+                    android:onClick="setDate"
+                    android:padding="12dp"
+                    android:textColor="@color/hijaupale" />
+
+                <TextView
+                    android:id="@+id/tv_eStudy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="End Study"
+                    android:textColor="@color/hijaupale"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/eStudy"
+                    android:layout_width="210dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/edit_text"
+                    android:drawableRight="@drawable/date_picker_icon"
+                    android:drawablePadding="4dp"
+                    android:onClick="setDate2"
+                    android:padding="12dp"
+                    android:textColor="@color/hijaupale" />
+
+                <Button
+                    android:id="@+id/submit_profile"
+                    android:layout_width="210dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="22dp"
+                    android:background="@drawable/button_submit_night"
+                    android:text="ADD"
+                    android:textColor="@color/hijaupastel" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

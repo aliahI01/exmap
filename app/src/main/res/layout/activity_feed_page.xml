@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SCREEN"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FeedPage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back_setting_item"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:background="@drawable/setting_back"
+                android:src="@drawable/baseline_keyboard_backspace_24" />
+
+            <TextView
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/back"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                style="@style/TEXT"
+                android:text="ADD FEEDBACK" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:layout_width="510dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/transparent"
+                android:paddingTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <EditText
+                        android:id="@+id/problem"
+                        style="@style/TEXT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:hint="Feedback Title"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/explanation"
+                        style="@style/TEXT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="12dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="top"
+                        android:hint="Explain your problem or suggestion or complement"
+                        android:minLines="15"
+                        android:padding="12dp"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/submit_feed"
+                        android:layout_width="210dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="22dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/button_submit"
+                        android:text="ADD"
+                        style="@style/BUTTON" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="560dp"
+                android:layout_height="match_parent">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/feed_rView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </androidx.core.widget.NestedScrollView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

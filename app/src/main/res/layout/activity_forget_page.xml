@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/main_back"
+    android:paddingLeft="18dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ForgetPage">
+
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="60dp"
+        android:src="@mipmap/app_logo" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        style="@style/TEXT"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ExMap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_marginTop="40dp"
+        android:padding="15dp"
+        android:background="@drawable/edit_text"
+        android:hint="Enter your email"
+        android:textColorHint="@color/hint"
+        android:textColor="@color/hijaupale"
+        android:width="260dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="260dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        style="@style/BUTTON"
+        android:text="Reset" />
+
+    <TextView
+        android:id="@+id/loginAcc"
+        android:layout_marginTop="20dp"
+        style="@style/TEXT"
+        android:gravity="center"
+        android:text="Back to login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

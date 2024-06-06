@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SCREEN"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TransactionPage">
+
+    <RelativeLayout
+        android:id="@+id/menu_background"
+        android:layout_width="291dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/menu_background">
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="100dp"
+            android:src="@mipmap/app_logo" />
+
+        <ImageView
+            android:id="@+id/homeMenu"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginBottom="-125dp"
+            android:layout_marginLeft="109dp"
+            android:layout_alignBottom="@+id/app_logo"
+            android:src="@drawable/home_green" />
+
+        <TextView
+            android:id="@+id/homeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/homeMenu"
+            android:layout_marginLeft="129dp"
+            android:layout_marginBottom="-20dp"
+            android:textStyle="bold"
+            android:text="HOME"
+            android:textColor="@color/hijaupastel" />
+
+        <ImageView
+            android:id="@+id/historyMenu"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginBottom="-125dp"
+            android:layout_marginLeft="109dp"
+            android:layout_alignBottom="@+id/homeLabel"
+            android:src="@drawable/history_green" />
+
+        <TextView
+            android:id="@+id/historyLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/historyMenu"
+            android:layout_marginLeft="120dp"
+            android:layout_marginBottom="-20dp"
+            android:textStyle="bold"
+            android:text="HISTORY"
+            android:textColor="@color/hijaupastel" />
+
+        <ImageView
+            android:id="@+id/settingMenu"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginBottom="-125dp"
+            android:layout_marginLeft="109dp"
+            android:layout_alignBottom="@+id/historyLabel"
+            android:src="@drawable/setting_green" />
+
+        <TextView
+            android:id="@+id/settingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/settingMenu"
+            android:layout_marginLeft="120dp"
+            android:layout_marginBottom="-20dp"
+            android:textStyle="bold"
+            android:text="SETTING"
+            android:textColor="@color/hijaupastel" />
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginBottom="-125dp"
+            android:layout_marginLeft="114dp"
+            android:layout_alignBottom="@+id/settingLabel"
+            android:src="@drawable/logout" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/DIVIDER"
+        android:layout_marginStart="65dp"
+        android:id="@+id/divider"
+        android:layout_toEndOf="@id/menu_background"
+        android:layout_width="5dp"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="25dp"
+        android:layout_width="977dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/divider">
+
+        <RelativeLayout
+            android:id="@+id/transInput"
+            android:layout_width="388dp"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/notesforTrans"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:text="To get text from the receipt, choose image first by click on the camera icon."
+                android:maxWidth="308dp"
+                android:maxLines="2"
+                style="@style/TEXT"/>
+
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_below="@+id/notesforTrans"
+                android:background="@drawable/edit_text"
+                android:textColor="@color/hijaupale"
+                android:hint="Amount"
+                android:textColorHint="@color/hint"
+                android:inputType="numberDecimal"
+                android:padding="15dp" />
+
+            <EditText
+                android:id="@+id/categList"
+                android:hint="Category"
+                android:textColorHint="@color/hint"
+                android:background="@drawable/edit_text"
+                android:textColor="@color/hijaupale"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@+id/amount"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="15dp" />
+
+            <EditText
+                android:id="@+id/notes"
+                android:layout_width="328dp"
+                android:layout_height="120dp"
+                android:layout_below="@+id/categList"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/edit_text"
+                android:gravity="start"
+                android:textColor="@color/hijaupale"
+                android:hint="Note"
+                android:textColorHint="@color/hint"
+                android:padding="15dp"
+                android:textAlignment="textStart" />
+
+            <LinearLayout
+                android:id="@+id/chooseTrans"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/expenseCb"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    style="@style/TEXT"
+                    android:layout_weight="1"
+                    android:text="Expense"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/earnCb"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    style="@style/TEXT"
+                    android:layout_weight="1"
+                    android:text="Earning"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/captureCam"
+                android:layout_below="@id/chooseTrans"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/cam"
+                    android:background="@drawable/round_img_night"
+                    android:src="@drawable/round_camera"
+                    android:layout_marginLeft="20dp"
+                    android:padding="6dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp" />
+
+                <TextView
+                    android:id="@+id/camID"
+                    style="@style/HINT"
+                    android:textSize="16dp"
+                    android:text="Capture or get receipt from library"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:textColor="@color/hijaupastel"
+                android:backgroundTint="@color/hijaupale"
+                android:text="Record"
+                android:layout_below="@id/captureCam"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="80dp"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/imageShow"
+            android:layout_width="480dp"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/transInput">
+
+            <com.ortiz.touchview.TouchImageView
+                android:id="@+id/receipt"
+                android:layout_width="480dp"
+                android:layout_height="498dp"
+                android:minWidth="470dp"
+                android:minHeight="498dp"
+                android:src="@drawable/receiptshow" />
+
+            <LinearLayout
+                android:layout_width="460dp"
+                android:layout_height="208dp"
+                android:layout_below="@+id/receipt"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_text"
+                android:orientation="vertical">
+
+                    <ScrollView
+                        android:fadeScrollbars="false"
+                        android:scrollbarThumbVertical="@color/hijaudark"
+                        android:layout_width="410dp"
+                        android:layout_height="130dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="2dp">
+
+                        <EditText
+                            android:id="@+id/textShow"
+                            android:hint="Show text from the image"
+                            android:textColorHint="@color/hint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:textColor="@color/hijaudark" />
+
+                    </ScrollView>
+
+                <Button
+                    android:id="@+id/textCopy"
+                    android:layout_width="120dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="@color/hijaupale"
+                    android:text="Get Text"
+                    android:textColor="@color/hijaupastel"
+                    app:layout_constraintTop_toBottomOf="@+id/textShow" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

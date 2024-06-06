@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_back"
+    android:paddingLeft="18dp"
+    android:orientation="vertical"
+    tools:context=".SignupPage">
+
+    <TextView
+        android:layout_marginTop="150dp"
+        android:textStyle="bold"
+        android:textColor="@color/hijaupastel"
+        android:textSize="32sp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ExMap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_marginTop="100dp"
+        android:padding="15dp"
+        android:background="@drawable/edit_text"
+        android:hint="Enter your email"
+        android:textColorHint="@color/hint"
+        android:textColor="@color/hijaupale"
+        android:width="260dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/pass"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:padding="15dp"
+        android:background="@drawable/edit_text"
+        android:hint="Enter your password"
+        android:textColorHint="@color/hint"
+        android:textColor="@color/hijaupale"
+        android:width="260dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSignup"
+        android:layout_marginTop="20dp"
+        android:width="260dp"
+        android:text="Signup"
+        android:background="@drawable/button_submit_night"
+        android:textColor="@color/hijaupastel"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/loginAcc"
+            android:paddingBottom="20dp"
+            android:textColor="@color/hijaupale"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:text="Have account? Login"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SCREEN"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TransactionShow">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/up"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp" >
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/setting_back"
+                android:src="@drawable/baseline_keyboard_backspace_24" />
+
+            <TextView
+                android:layout_width="1136dp"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/back"
+                android:textStyle="bold"
+                style="@style/TEXT"
+                android:text="RECORD DETAILS" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/left"
+            android:layout_margin="30dp"
+            android:layout_below="@+id/up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/hijaudark"
+            app:cardElevation="3dp">
+
+            <RelativeLayout
+                android:padding="20dp"
+                android:layout_width="480dp"
+                android:layout_height="match_parent">
+
+                <com.ortiz.touchview.TouchImageView
+                    android:id="@+id/receipt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/hijaudark" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_toRightOf="@+id/left"
+            android:layout_below="@+id/up"
+            android:paddingLeft="50dp"
+            android:paddingTop="30dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/right"
+            android:orientation="vertical"
+            android:layout_width="340dp"
+            android:layout_height="match_parent" >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                app:cardBackgroundColor="@color/hijaudark"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvamount"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:text="AMOUNT"
+                            android:textColor="@color/hijaupastel"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/amountShow"
+                        android:layout_width="250dp"
+                        android:layout_height="35dp"
+                        android:paddingLeft="20dp"
+                        android:textColor="@color/hijaupastel"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/hijaudark"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="3dp" >
+
+                <LinearLayout
+                    android:padding="15dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvcateg"
+                            android:text="CATEGORY"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/hijaupastel"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/categList"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/hijaupastel"
+                        android:paddingLeft="20dp"
+                        android:layout_width="250dp"
+                        android:layout_height="35dp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/hijaudark"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="3dp" >
+
+                <LinearLayout
+                    android:padding="15dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvdate"
+                            android:text="DATE"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/hijaupastel"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="250dp"
+                        android:layout_height="35dp"
+                        android:layout_marginBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:textColor="@color/hijaupastel"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/hijaudark"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="3dp" >
+
+                <LinearLayout
+                    android:padding="15dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvtype"
+                            android:text="TYPE"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/hijaupastel"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/type"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/hijaupastel"
+                        android:paddingLeft="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="250dp"
+                        android:layout_height="35dp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/hijaudark"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="3dp" >
+
+                <LinearLayout
+                    android:padding="15dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvnotes"
+                            android:text="NOTE"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/hijaupastel"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp" />
+
+                    </LinearLayout>
+
+                    <ScrollView
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/notes"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/hijaupastel"
+                            android:paddingLeft="20dp"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content" />
+
+                    </ScrollView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

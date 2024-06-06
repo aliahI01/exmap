@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutPage">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/back_setting_item"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/baseline_keyboard_backspace_24" />
+
+            <TextView
+                android:id="@+id/tv_detail"
+                android:gravity="center"
+                android:textStyle="bold"
+                style="@style/TEXT"
+                android:layout_width="1146dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/back"
+                android:text="ABOUT" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:paddingLeft="100dp"
+            android:paddingTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/left"
+                    android:paddingTop="30dp"
+                    android:layout_width="510dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:text=
+                            "This is the link to my website and telegram. Don't hesitate to contact me if have any inquery. Want to know me more, come visit my website."
+                        android:textSize="18dp"
+                        style="@style/TEXT"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="30dp"
+                        android:paddingRight="20dp"
+                        android:layout_width="410dp"
+                        android:layout_height="wrap_content" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="35dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/transparent"
+                        android:orientation="vertical"
+                        app:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="15dp">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/setting_back"
+                                android:backgroundTint="@color/hijaupastel"
+                                android:padding="8dp"
+                                android:src="@drawable/website" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingLeft="16dp">
+
+                                <TextView
+                                    android:id="@+id/website"
+                                    android:layout_width="180dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:hint="My Website"
+                                    android:textColorHint="@color/hijaupastel"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="35dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/transparent"
+                        android:orientation="vertical"
+                        app:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/setting_back"
+                                android:backgroundTint="@color/hijaupastel"
+                                android:padding="8dp"
+                                android:src="@drawable/tele" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingLeft="16dp">
+
+                                <TextView
+                                    android:id="@+id/tv_tele"
+                                    android:layout_width="180dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:hint="My Telegram"
+                                    android:textColorHint="@color/hijaupastel"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="35dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/transparent"
+                        android:orientation="vertical"
+                        app:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/setting_back"
+                                android:backgroundTint="@color/hijaupastel"
+                                android:padding="8dp"
+                                android:src="@drawable/email" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingLeft="16dp">
+
+                                <TextView
+                                    android:id="@+id/tv_email"
+                                    android:layout_width="180dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:hint="My Email"
+                                    android:autoLink="email"
+                                    android:textColorHint="@color/hijaupastel"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    style="@style/DIVIDER"
+                    android:layout_marginStart="15dp"
+                    android:id="@+id/divider"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toEndOf="@id/menu_background"
+                    android:layout_width="5dp"
+                    android:layout_height="410dp" />
+
+                <LinearLayout
+                    android:id="@+id/right"
+                    android:padding="30dp"
+                    android:layout_toRightOf="@+id/left"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="510dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:src="@mipmap/app_logo"
+                        android:layout_marginBottom="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp" />
+
+                    <TextView
+                        android:text="ExMAp : Expenses Management Application"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        style="@style/TEXT"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="Target: University Student with Peranti Siswa"
+                        android:textSize="18dp"
+                        style="@style/TEXT"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:text="Description: ExMAp is an application to record daily expenses. This to ensure
+student have a suitable place to organize their money (in and out). This application is simple and have the basic needs.
+In future, hope this application can enhance to be more advance and increase the usability needs from you."
+                        android:textSize="18dp"
+                        style="@style/TEXT"
+                        android:layout_gravity="center_horizontal|center"
+                        android:gravity="center"
+                        android:layout_marginBottom="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
